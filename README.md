@@ -1,39 +1,37 @@
 # 🧠 Aryan's DSA Progress Tracker
 
 Welcome to my Data Structures & Algorithms progress tracker!  
-I'm currently following **Striver's A2Z DSA Sheet** to prepare for interviews at top product-based companies.
+I'm currently following Striver's A2Z DSA Sheet to prepare for interviews at top product-based companies.
 
 This repository is a structured log of my problem-solving journey across various platforms like LeetCode, GeeksforGeeks, and CodeStudio.
 
 ---
 
-## 📌 Current Sheet: Striver A2Z DSA Sheet  
-- 🔗 [Striver A2Z Sheet](https://takeuforward.org/interviews/strivers-dsa-sheet-top-coding-interview-problems/)
-- 🧭 Currently Solving: **Binary Search – Split Array Largest Sum**
+## 📌 Current Sheet
+**Striver A2Z DSA Sheet**  
+🔗 [Striver A2Z Sheet](#)
 
----
+🧭 **Currently Solving:** Strings easy to medium question
+
+--
 
 ## 🗂️ Folder Structure
+├── arrays/
+├── binary_search/
+├── strings/
+├── Notes/
+└── README.md
 
 
 ---
 
-## ✅ Problems Solved (Selected)
+## ✅ Today's Problems Solved
 
-| # | Problem                          | Topic         | Platform  | Status |
-|---|----------------------------------|---------------|-----------|--------|
-| 1 | Two Sum                          | Arrays        | LeetCode  | ✅     |
-| 2 | Binary Search (Basic Template)   | Binary Search | Custom    | ✅     |
-| 3 | Search Insert Position           | Binary Search | LeetCode  | ✅     |
-| 4 | Split Array Largest Sum          | Binary Search | LeetCode  | 🚧 In Progress |
-
----
-
-## 📅 Weekly Goals
-
-- ⏳ Solve 5–10 problems per week
-- 📚 Maintain code quality and documentation
-- 🔄 Push solutions regularly with commit messages
+| #  | Problem                      | Topic           | Platform  | Status        |
+|----|------------------------------|------------------|-----------|----------------|
+| 4  | Split Array Largest Sum      | Binary Search   | LeetCode  | 🚧 In Progress |
+| 5  | Isomorphic Strings           | Strings         | LeetCode  | ✅ Completed   |
+| 6  | Longest Common Prefix        | Strings         | LeetCode  | ✅ Completed   |
 
 ---
 
@@ -41,15 +39,25 @@ This repository is a structured log of my problem-solving journey across various
 
 🗒️ I maintain short markdown notes on patterns, templates, and tricky problems in the `/Notes` folder.
 
+### 🔹 Key Takeaways (Recent)
+
+- 📌 *Isomorphic Strings:* Learned to use bi-directional hash maps to enforce one-to-one character mapping.
+- 📌 *Longest Common Prefix:* Practiced prefix trimming logic using substr and horizontal scanning pattern.
+
+---
+
+## 📅 Weekly Goals
+
+- ⏳ Solve 5–10 problems per week  
+- 📚 Maintain code quality and documentation  
+- 🔄 Push solutions regularly with commit messages  
+
 ---
 
 ## 🤝 Let's Connect!
 
-- 💼 [LinkedIn](https://linkedin.com/in/your-profile) *(Update this!)*
-- 🌱 Follow my journey and feel free to star this repo if it helps!
-
----
+💼 [LinkedIn] not structured yet || Email - aryansha342@gmail.com
+🌱 Follow my journey and feel free to ⭐ this repo if it helps!
 
 > “Code every day. Keep it clean. Keep it consistent.” 💻🔥
-
 
