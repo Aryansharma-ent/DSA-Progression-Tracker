@@ -11,7 +11,7 @@ This repository is a structured log of my problem-solving journey across various
 **Striver A2Z DSA Sheet**  
 🔗 [Striver A2Z Sheet](#)
 
-🧭 **Currently Solving:** Strings easy to medium question
+🧭 **Currently Solving:** Strings medium questions
 
 --
 
@@ -27,13 +27,11 @@ This repository is a structured log of my problem-solving journey across various
 
 ## ✅ Today's Problems Solved
 
-| #  | Problem                      | Topic           | Platform  | Status        |
-|----|------------------------------|------------------|-----------|----------------|
-| 4  | Split Array Largest Sum      | Binary Search   | LeetCode  | 🚧 In Progress |
-| 5  | Isomorphic Strings           | Strings         | LeetCode  | ✅ Completed   |
-| 6  | Longest Common Prefix        | Strings         | LeetCode  | ✅ Completed   |
-
----
+| #| # | Problem                             | Topic   | Platform | Status       |
+|---|-------------------------------------|---------|----------|--------------|
+| 5 | Frequency Sort Characters           | Strings | LeetCode | ✅ Completed  |
+| 6 | Roman to Integer                    | Strings | LeetCode | ✅ Completed  |
+| 7 | Maximum Nesting Depth of Parentheses| Strings | LeetCode | ✅ Completed  |
 
 ## 🧠 Notes & Learnings
 
