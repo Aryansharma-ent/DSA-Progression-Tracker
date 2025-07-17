@@ -1,21 +1,19 @@
 // Problem: Sort Characters By Frequency
 // Link: https://leetcode.com/problems/sort-characters-by-frequency/
 
-#include <bits/stdc++.h>
-using namespace std;
 
 /*
 Approach:
 1. Count frequency of each character using an unordered_map.
 2. Use a max-heap (priority_queue) to sort characters by their frequency.
-   - Each element in the heap is a pair: {frequency, character}.
+- Each element in the heap is a pair: {frequency, character}.
 3. Pop from the heap and append the character 'frequency' times to the result string.
 
 Time Complexity:
 - O(n log k), where n = length of the string and k = number of unique characters.
-   - O(n) to build the frequency map.
-   - O(k log k) to push all unique characters into the heap.
-   - O(n) to build the result string.
+- O(n) to build the frequency map.
+- O(k log k) to push all unique characters into the heap.
+- O(n) to build the result string.
 
 Space Complexity:
 - O(k) for the frequency map and heap.
@@ -23,8 +21,10 @@ Space Complexity:
 
 */
 
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
-public:
+    public:
     string frequencySort(string s) {
         unordered_map<char, int> freq;
         for (char c : s) {
