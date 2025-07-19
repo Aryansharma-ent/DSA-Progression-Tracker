@@ -11,7 +11,7 @@ This repository is a structured log of my problem-solving journey across various
 **Striver A2Z DSA Sheet**  
 🔗 [Striver A2Z Sheet](#)
 
-🧭 **Currently Solving:** Strings medium questions
+🧭 **Currently Solving:** Linked-Lists problems
 
 --
 
@@ -19,19 +19,20 @@ This repository is a structured log of my problem-solving journey across various
 ├── arrays/
 ├── binary_search/
 ├── strings/
-├── Notes/
-└── README.md
-
+├── Linked-Lists
+|__ README.md
+ 
 
 ---
 
 ## ✅ Today's Problems Solved
+| Problem           | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `printList.cpp`   | Traverse and print all elements of a linked list |
+| `search_key.cpp`  | Search for a given key in the linked list        |
+| `count_nodes.cpp` | Count total nodes in a singly linked list        |
+| `delete_head.cpp` | Delete the head node from the linked list        |
 
-| #| # | Problem                             | Topic   | Platform | Status       |
-|---|-------------------------------------|---------|----------|--------------|
-| 5 | Frequency Sort Characters           | Strings | LeetCode | ✅ Completed  |
-| 6 | Roman to Integer                    | Strings | LeetCode | ✅ Completed  |
-| 7 | Maximum Nesting Depth of Parentheses| Strings | LeetCode | ✅ Completed  |
 
 ## 🧠 Notes & Learnings
 
