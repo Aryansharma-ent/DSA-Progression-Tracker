@@ -26,12 +26,11 @@ This repository is a structured log of my problem-solving journey across various
 ---
 
 ## ✅ Today's Problems Solved
-| Problem           | Description                                      |
-| ----------------- | ------------------------------------------------ |
-| `printList.cpp`   | Traverse and print all elements of a linked list |
-| `search_key.cpp`  | Search for a given key in the linked list        |
-| `count_nodes.cpp` | Count total nodes in a singly linked list        |
-| `delete_head.cpp` | Delete the head node from the linked list        |
+| # | Problem Name         | Description                                     | Status |
+| - | -------------------- | ----------------------------------------------- | ------ |
+| 1 | `deleteHead()`       | Deletes the head node from a doubly linked list | ✅ Done |
+| 2 | `insertBeforeHead()` | Inserts a new node before the head              | ✅ Done |
+| 3 | `reverseDLL()`       | Reverses a doubly linked list in-place          | ✅ Done |
 
 
 ## 🧠 Notes & Learnings
@@ -40,8 +39,7 @@ This repository is a structured log of my problem-solving journey across various
 
 ### 🔹 Key Takeaways (Recent)
 
-- 📌 *Isomorphic Strings:* Learned to use bi-directional hash maps to enforce one-to-one character mapping.
-- 📌 *Longest Common Prefix:* Practiced prefix trimming logic using substr and horizontal scanning pattern.
+- 📌 Singly-Linked-List basic Question 
 
 ---
 
