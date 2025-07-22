@@ -26,11 +26,13 @@ This repository is a structured log of my problem-solving journey across various
 ---
 
 ## ✅ Today's Problems Solved
-| # | Problem Name         | Description                                     | Status |
-| - | -------------------- | ----------------------------------------------- | ------ |
-| 1 | `deleteHead()`       | Deletes the head node from a doubly linked list | ✅ Done |
-| 2 | `insertBeforeHead()` | Inserts a new node before the head              | ✅ Done |
-| 3 | `reverseDLL()`       | Reverses a doubly linked list in-place          | ✅ Done |
+| S. No | Problem Name                    | File Name                      | Approach                  | Time Complexity | Space Complexity |
+| ----- | ------------------------------- | ------------------------------ | ------------------------- | --------------- | ---------------- |
+| 1     | Middle of the Linked List       | `MiddleOfLinkedList.cpp`       | Fast & Slow Pointer       | O(n)            | O(1)             |
+| 2     | Reverse Linked List (Iterative) | `ReverseLinkedList.cpp`        | Iterative with 3 pointers | O(n)            | O(1)             |
+| 3     | Reverse Linked List (Recursive) | `ReverseLinkedList.cpp` (same) | Recursive                 | O(n)            | O(n) (stack)     |
+| 4     | Reverse Linked List (Stack)     | `ReverseLinkedList_Stack.cpp`  | Using stack               | O(n)            | O(n)             |
+
 
 
 ## 🧠 Notes & Learnings
