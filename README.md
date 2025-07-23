@@ -11,7 +11,7 @@ This repository is a structured log of my problem-solving journey across various
 **Striver A2Z DSA Sheet**  
 🔗 [Striver A2Z Sheet](#)
 
-🧭 **Currently Solving:** Linked-Lists problems
+🧭 **Currently Solving:** Singly-Linked-Lists medium problems
 
 --
 
@@ -26,12 +26,12 @@ This repository is a structured log of my problem-solving journey across various
 ---
 
 ## ✅ Today's Problems Solved
-| S. No | Problem Name                    | File Name                      | Approach                  | Time Complexity | Space Complexity |
-| ----- | ------------------------------- | ------------------------------ | ------------------------- | --------------- | ---------------- |
-| 1     | Middle of the Linked List       | `MiddleOfLinkedList.cpp`       | Fast & Slow Pointer       | O(n)            | O(1)             |
-| 2     | Reverse Linked List (Iterative) | `ReverseLinkedList.cpp`        | Iterative with 3 pointers | O(n)            | O(1)             |
-| 3     | Reverse Linked List (Recursive) | `ReverseLinkedList.cpp` (same) | Recursive                 | O(n)            | O(n) (stack)     |
-| 4     | Reverse Linked List (Stack)     | `ReverseLinkedList_Stack.cpp`  | Using stack               | O(n)            | O(n)             |
+| # | **Problem**                          | **Approach Used**                           | **Time Complexity** | **Space Complexity** |
+| - | ------------------------------------ | ------------------------------------------- | ------------------- | -------------------- |
+| 1 | Detect Cycle in Linked List          | Floyd’s Cycle Detection (Tortoise & Hare)   | `O(n)`              | `O(1)`               |
+| 2 | Count Length of Cycle in Linked List | Floyd’s Algorithm + Counting Nodes          | `O(n)`              | `O(1)`               |
+| 3 | Check if Linked List is Palindrome   | Find Mid → Reverse Second Half → Compare    | `O(n)`              | `O(1)`               |
+| 4 | Odd Even Linked List                 | Two-pointer technique (Odd/Even separation) | `O(n)`              | `O(1)`               |
 
 
 
