@@ -26,12 +26,12 @@ This repository is a structured log of my problem-solving journey across various
 ---
 
 ## ✅ Today's Problems Solved
-| # | **Problem**                          | **Approach Used**                           | **Time Complexity** | **Space Complexity** |
-| - | ------------------------------------ | ------------------------------------------- | ------------------- | -------------------- |
-| 1 | Detect Cycle in Linked List          | Floyd’s Cycle Detection (Tortoise & Hare)   | `O(n)`              | `O(1)`               |
-| 2 | Count Length of Cycle in Linked List | Floyd’s Algorithm + Counting Nodes          | `O(n)`              | `O(1)`               |
-| 3 | Check if Linked List is Palindrome   | Find Mid → Reverse Second Half → Compare    | `O(n)`              | `O(1)`               |
-| 4 | Odd Even Linked List                 | Two-pointer technique (Odd/Even separation) | `O(n)`              | `O(1)`               |
+| # | Problem Title                      | File Name                       | Approach Summary                                                                                   | Time Complexity | Space Complexity |
+| - | ---------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------- | --------------- | ---------------- |
+| 1 | Sort 0s, 1s, and 2s in Linked List | `sort-0s-1s-2s-linked-list.cpp` | Create 3 dummy lists (`zero`, `one`, `two`) → Traverse and partition nodes → Merge the lists       | O(n)            | O(1)             |
+| 2 | Intersection of Two Linked Lists   | `intersection-of-ll.cpp`        | Two-pointer technique → Traverse both → Switch heads to align → Meet at intersection or null       | O(n + m)        | O(1)             |
+| 3 | Add One to Linked List             | `add-one-to-linked-list.cpp`    | Recursive reverse carry propagation from tail → Modify node values → Add new head if carry remains | O(n)            | O(n) (stack)     |
+
 
 
 
