@@ -1,13 +1,16 @@
-/*
- Problem: Add One to a Number Represented as Linked List
-
+/* Problem: Add One to a Number Represented as Linked List
  Approach:
-Use recursion to reach the end of the list and return carry. Add carry to current node and propagate back.
-If a carry remains at the end, prepend a new node with value 1.
+ We recursively traverse to the end of the linked list and start returning carry from the last node.
+ Each node adds the carry to its value.
+ If the value becomes 10, we set it to 0 and return a carry of 1 to the previous node.
+ If the value is less than 10, we just return carry 0.
+ Finally, if there's still a carry left after processing the head node, we create a new node with value 1 and make it the new head.
 
- Time Complexity: O(n)
-Space Complexity: O(n) due to recursion stack
-*/
+ Edge Case:
+ For a list like 9 → 9 → 9, the result becomes 1 → 0 → 0 → 0.
+
+ Time Complexity: O(n) — we visit each node once via recursion.
+ Space Complexity: O(n) — due to recursive call stack.*/
 
 
 
