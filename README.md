@@ -11,7 +11,7 @@ This repository is a structured log of my problem-solving journey across various
 **Striver A2Z DSA Sheet**  
 🔗 [Striver A2Z Sheet](#)
 
-🧭 **Currently Solving:** Singly-Linked-Lists medium problems
+🧭 **Currently Solving:** Doubly-Linked-Lists medium problems
 
 --
 
@@ -26,11 +26,12 @@ This repository is a structured log of my problem-solving journey across various
 ---
 
 ## ✅ Today's Problems Solved
-| # | Problem Title                      | File Name                       | Approach Summary                                                                                   | Time Complexity | Space Complexity |
-| - | ---------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------- | --------------- | ---------------- |
-| 1 | Sort 0s, 1s, and 2s in Linked List | `sort-0s-1s-2s-linked-list.cpp` | Create 3 dummy lists (`zero`, `one`, `two`) → Traverse and partition nodes → Merge the lists       | O(n)            | O(1)             |
-| 2 | Intersection of Two Linked Lists   | `intersection-of-ll.cpp`        | Two-pointer technique → Traverse both → Switch heads to align → Meet at intersection or null       | O(n + m)        | O(1)             |
-| 3 | Add One to Linked List             | `add-one-to-linked-list.cpp`    | Recursive reverse carry propagation from tail → Modify node values → Add new head if carry remains | O(n)            | O(n) (stack)     |
+| S.No. | Problem Name                                       | Platform | Topic                | File Name                           | Status |
+| ----- | -------------------------------------------------- | -------- | -------------------- | ----------------------------------- | ------ |
+| 1     | Remove Duplicates from a Sorted Doubly Linked List | GFG      | Linked List (Doubly) | `RemoveDuplicatesFromSortedDLL.cpp` | ✅ Done |
+| 2     | Delete all occurrences of a key in DLL             | GFG      | Linked List (Doubly) | `DeleteOccurrencesOfKeyInDLL.cpp`   | ✅ Done |
+| 3     | Find pairs with given sum in DLL                   | GFG      | Linked List (Doubly) | `FindPairsWithGivenSumInDLL.cpp`    | ✅ Done |
+
 
 
 
