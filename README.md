@@ -11,7 +11,7 @@ This repository is a structured log of my problem-solving journey across various
 **Striver A2Z DSA Sheet**  
 🔗 [Striver A2Z Sheet](#)
 
-🧭 **Currently Solving:** Doubly-Linked-Lists medium problems
+🧭 **Currently Solving:** Monotonic stack questions
 
 --
 
@@ -20,18 +20,18 @@ This repository is a structured log of my problem-solving journey across various
 ├── binary_search/
 ├── strings/
 ├── Linked-Lists
+|__ Recursion
+|__ Stacks and Queues
 |__ README.md
  
 
 ---
 
 ## ✅ Today's Problems Solved
-| S.No. | Problem Name                                       | Platform | Topic                | File Name                           | Status |
-| ----- | -------------------------------------------------- | -------- | -------------------- | ----------------------------------- | ------ |
-| 1     | Remove Duplicates from a Sorted Doubly Linked List | GFG      | Linked List (Doubly) | `RemoveDuplicatesFromSortedDLL.cpp` | ✅ Done |
-| 2     | Delete all occurrences of a key in DLL             | GFG      | Linked List (Doubly) | `DeleteOccurrencesOfKeyInDLL.cpp`   | ✅ Done |
-| 3     | Find pairs with given sum in DLL                   | GFG      | Linked List (Doubly) | `FindPairsWithGivenSumInDLL.cpp`    | ✅ Done |
-
+| Problem | Platform / No. | Pattern | Approach | Time Complexity | Space Complexity | File Name |
+|---------|----------------|---------|----------|------------------|------------------|-----------|
+| Next Greater Element I | LeetCode 496 | Monotonic Stack | Use a monotonic decreasing stack + hash map to precompute next greater for `nums2`, then lookup for each `nums1` element. | O(m + n) | O(n) | `next_greater_element_I.cpp` |
+| Next Greater Element II | LeetCode 503 | Monotonic Stack (Circular) | Simulate circularity by iterating `2 * n` times in reverse with a monotonic decreasing stack to find next greater elements. | O(n) | O(n) | `next_greater_element_II.cpp` |
 
 
 
@@ -42,7 +42,7 @@ This repository is a structured log of my problem-solving journey across various
 
 ### 🔹 Key Takeaways (Recent)
 
-- 📌 Singly-Linked-List basic Question 
+- 📌 Recursion and Backtracking questions
 
 ---
 
