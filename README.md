@@ -28,10 +28,11 @@ This repository is a structured log of my problem-solving journey across various
 ---
 
 ## ✅ Today's Problems Solved
-| Problem | Platform / No. | Pattern | Approach | Time Complexity | Space Complexity | File Name |
-|---------|----------------|---------|----------|------------------|------------------|-----------|
-| Next Greater Element I | LeetCode 496 | Monotonic Stack | Use a monotonic decreasing stack + hash map to precompute next greater for `nums2`, then lookup for each `nums1` element. | O(m + n) | O(n) | `next_greater_element_I.cpp` |
-| Next Greater Element II | LeetCode 503 | Monotonic Stack (Circular) | Simulate circularity by iterating `2 * n` times in reverse with a monotonic decreasing stack to find next greater elements. | O(n) | O(n) | `next_greater_element_II.cpp` |
+| # | Problem                  | Approach                                                    | Complexity                      | File                           |
+| - | ------------------------ | ----------------------------------------------------------- | ------------------------------- | ------------------------------ |
+| 1 | Sum of Subarray Minimums | Monotonic Stack (Next/Prev Smaller Element contributions)   | **Time:** O(n), **Space:** O(n) | `sum_of_subarray_minimums.cpp` |
+| 2 | Asteroid Collision       | Stack (simulate collisions)                                 | **Time:** O(n), **Space:** O(n) | `asteroid_collision.cpp`       |
+| 3 | Sum of Subarray Ranges   | Monotonic Stack (Next/Prev Greater & Smaller contributions) | **Time:** O(n), **Space:** O(n) | `sum_of_subarray_ranges.cpp`   |
 
 
 
