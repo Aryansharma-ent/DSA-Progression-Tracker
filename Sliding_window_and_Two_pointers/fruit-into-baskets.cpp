@@ -16,6 +16,7 @@ Approach:
 Complexity:
 - Time Complexity: O(n), since each element is added/removed from the window at most once.
 - Space Complexity: O(1), as the map stores at most 2 distinct fruit types.
+pretty easy
 */
 #include <bits/stdc++.h>
 using namespace std;
