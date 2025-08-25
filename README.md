@@ -11,7 +11,7 @@ This repository is a structured log of my problem-solving journey across various
 **Striver A2Z DSA Sheet**  
 🔗 [Striver A2Z Sheet](#)
 
-🧭 **Currently Solving:** Monotonic stack questions
+🧭 **Currently Solving:** Sliding window and two pointers combined
 
 --
 
@@ -22,17 +22,19 @@ This repository is a structured log of my problem-solving journey across various
 ├── Linked-Lists
 |__ Recursion
 |__ Stacks and Queues
+|__ Sliding window and two pointers combined
 |__ README.md
  
 
 ---
 
 ## ✅ Today's Problems Solved
-| # | Problem                  | Approach                                                    | Complexity                      | File                           |
-| - | ------------------------ | ----------------------------------------------------------- | ------------------------------- | ------------------------------ |
-| 1 | Sum of Subarray Minimums | Monotonic Stack (Next/Prev Smaller Element contributions)   | **Time:** O(n), **Space:** O(n) | `sum_of_subarray_minimums.cpp` |
-| 2 | Asteroid Collision       | Stack (simulate collisions)                                 | **Time:** O(n), **Space:** O(n) | `asteroid_collision.cpp`       |
-| 3 | Sum of Subarray Ranges   | Monotonic Stack (Next/Prev Greater & Smaller contributions) | **Time:** O(n), **Space:** O(n) | `sum_of_subarray_ranges.cpp`   |
+
+| # | Problem | Difficulty | Approach | Status |
+|---|----------|------------|----------|--------|
+| 1 | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) | Medium | Sliding Window + HashMap | ✅ Solved |
+| 2 | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Hard | Sliding Window + AtMostK Trick | ✅ Solved |
+| 3 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | Sliding Window + HashMap | ✅ Solved |
 
 
 
@@ -43,7 +45,7 @@ This repository is a structured log of my problem-solving journey across various
 
 ### 🔹 Key Takeaways (Recent)
 
-- 📌 Recursion and Backtracking questions
+- 📌 Monotonic stack
 
 ---
 
