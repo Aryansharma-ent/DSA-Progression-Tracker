@@ -1,0 +1,308 @@
+# Line Sweep (Event Processing Technique)
+
+## Definition
+
+Line sweep is a technique used to process events in sorted order.
+
+Instead of checking every point individually, convert intervals into start/end events, sort them, and sweep through them while maintaining some state.
+
+Think of an imaginary line moving from left to right.
+
+At each event:
+
+- something starts
+- something ends
+
+Update the current state accordingly.
+
+---
+
+## When to Use
+
+Use line sweep when problems involve:
+
+- Intervals or ranges
+- Overlapping segments
+- Active events over time
+- Counting how many intervals cover a point
+- Maximum overlap
+- Merging intervals
+- Scheduling problems
+- Coordinate compression + range updates
+
+---
+
+## Core Idea
+
+Convert each interval:
+
+```text
+[l, r]
+```
+
+into two events:
+
+```cpp
+(l, +1)      // interval starts
+(r + 1, -1)  // interval ends
+```
+
+Sort all events by position.
+
+Traverse from left to right while maintaining:
+
+```cpp
+active += event_value;
+```
+
+The variable `active` represents the number of currently active intervals.
+
+---
+
+## Example
+
+Intervals:
+
+```text
+[1, 4]
+[2, 5]
+[7, 9]
+```
+
+Convert to events:
+
+```text
+(1, +1)
+(5, -1)
+
+(2, +1)
+(6, -1)
+
+(7, +1)
+(10, -1)
+```
+
+Sort:
+
+```text
+(1, +1)
+(2, +1)
+(5, -1)
+(6, -1)
+(7, +1)
+(10, -1)
+```
+
+Sweep:
+
+```text
+Position    Active
+
+1           1
+2           2
+5           1
+6           0
+7           1
+10          0
+```
+
+Maximum overlap = 2.
+
+---
+
+## Basic Template
+
+```cpp
+vector<pair<int, int>> events;
+
+for (auto& interval : intervals) {
+    int l = interval[0];
+    int r = interval[1];
+
+    events.push_back({l, +1});
+    events.push_back({r + 1, -1});
+}
+
+sort(events.begin(), events.end());
+
+int active = 0;
+
+for (auto& [pos, delta] : events) {
+    active += delta;
+}
+```
+
+---
+
+## Maximum Overlap Template
+
+```cpp
+vector<pair<int, int>> events;
+
+for (auto& interval : intervals) {
+    int l = interval[0];
+    int r = interval[1];
+
+    events.push_back({l, +1});
+    events.push_back({r + 1, -1});
+}
+
+sort(events.begin(), events.end());
+
+int active = 0;
+int answer = 0;
+
+for (auto& [pos, delta] : events) {
+    active += delta;
+    answer = max(answer, active);
+}
+```
+
+---
+
+## Alternative Event Representation
+
+Sometimes intervals are treated as:
+
+```text
+[l, r)
+```
+
+(start inclusive, end exclusive)
+
+Events become:
+
+```cpp
+events.push_back({l, +1});
+events.push_back({r, -1});
+```
+
+Always check the problem statement carefully.
+
+---
+
+## Difference Array vs Line Sweep
+
+Difference array:
+
+```text
+Uses an array of size N.
+Works when coordinates are small and bounded.
+```
+
+Line sweep:
+
+```text
+Stores only event points.
+Works when coordinates are huge (up to 10^9 or more).
+```
+
+Difference array:
+
+```text
+Space: O(N)
+```
+
+Line sweep:
+
+```text
+Space: O(Q)
+```
+
+where `Q` is the number of intervals.
+
+---
+
+## Coordinate Compression + Line Sweep
+
+When coordinates are large but many queries exist:
+
+1. Collect all unique coordinates.
+2. Sort them.
+3. Map coordinates to compressed indices.
+4. Apply difference array / prefix sum on compressed indices.
+
+Pattern:
+
+```text
+Large coordinates + many updates
+⇒ Coordinate Compression + Line Sweep
+```
+
+---
+
+## Common Problems
+
+- Maximum overlapping intervals
+- Meeting Rooms II
+- Car Pooling
+- Employee Free Time
+- Skyline Problem
+- Rectangle Area Union
+- Number of Airplanes in the Sky
+- My Calendar
+- Corporate Flight Bookings
+- Brightness / Coverage problems
+
+---
+
+## Recognition Pattern
+
+Think of line sweep when you see:
+
+- Intervals
+- Overlapping ranges
+- Active events
+- Time-based scheduling
+- Huge coordinates (10^9)
+- Maximum simultaneous events
+- Union of intervals
+- Coverage count
+
+Keywords:
+
+```text
+overlap
+active
+simultaneous
+intersections
+coverage
+events
+timeline
+```
+
+---
+
+## Complexity
+
+Let `M` be the number of events.
+
+Usually:
+
+```text
+Create events: O(M)
+Sort events: O(M log M)
+Sweep: O(M)
+
+Total: O(M log M)
+```
+
+where:
+
+```text
+M = 2 × number_of_intervals
+```
+
+---
+
+## One-Line Intuition
+
+Convert intervals into events, sort them, and process them from left to right.
+
+Remember:
+
+```text
+Difference Array = Mark boundaries in an array.
+
+Line Sweep = Mark boundaries in sorted event space.
+```

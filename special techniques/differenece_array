@@ -1,0 +1,337 @@
+# Difference Array (Range Update Optimization)
+
+## Definition
+
+A difference array is used to perform multiple range updates efficiently.
+
+Instead of updating every element in a range `[l, r]`, we mark only:
+
+- where the update starts
+- where the update ends
+
+Then we use a prefix sum to reconstruct the final array.
+
+---
+
+## When to Use
+
+Use a difference array when:
+
+- There are many range update queries.
+- Queries are of the form:
+
+  ```cpp
+  arr[l...r] += val;
+  ```
+
+- You need the final array after all updates.
+- Constraints are large (`N, Q ≈ 10^5` or more).
+
+---
+
+## Core Idea
+
+For each update:
+
+```cpp
+arr[l...r] += val;
+```
+
+Instead of:
+
+```cpp
+for (int i = l; i <= r; i++) {
+    arr[i] += val;
+}
+```
+
+Do:
+
+```cpp
+diff[l] += val;
+
+if (r + 1 < n)
+    diff[r + 1] -= val;
+```
+
+After processing all queries, take the prefix sum of `diff`.
+
+---
+
+## Why Prefix Sum?
+
+The difference array stores only the change in value at each index.
+
+- `+val` at index `l` means: start adding `val`
+- `-val` at index `r + 1` means: stop adding `val`
+
+The prefix sum propagates these changes forward.
+
+Formula:
+
+```cpp
+final[0] = diff[0];
+
+for (int i = 1; i < n; i++) {
+    final[i] = final[i - 1] + diff[i];
+}
+```
+
+---
+
+## Example
+
+Initial array:
+
+```cpp
+arr = [0, 0, 0, 0, 0]
+```
+
+Query:
+
+```cpp
+[1, 3] += 5
+```
+
+Update `diff`:
+
+```cpp
+diff[1] += 5;
+diff[4] -= 5;
+```
+
+Now:
+
+```cpp
+diff = [0, 5, 0, 0, -5]
+```
+
+Prefix sum:
+
+```text
+index:  0  1  2  3  4
+diff :  0  5  0  0 -5
+pref :  0  5  5  5  0
+```
+
+Final array:
+
+```cpp
+arr = [0, 5, 5, 5, 0]
+```
+
+---
+
+## Complete Template
+
+```cpp
+int n; // size of array
+
+vector<long long> diff(n + 1, 0);
+
+// queries: {l, r, val}
+for (auto& q : queries) {
+    int l = q[0];
+    int r = q[1];
+    long long val = q[2];
+
+    diff[l] += val;
+
+    if (r + 1 < n)
+        diff[r + 1] -= val;
+}
+
+// Build final array using prefix sum
+vector<long long> arr(n);
+
+arr[0] = diff[0];
+
+for (int i = 1; i < n; i++) {
+    arr[i] = arr[i - 1] + diff[i];
+}
+```
+
+---
+
+## In-Place Prefix Sum
+
+You can reuse `diff` itself:
+
+```cpp
+for (int i = 1; i < n; i++) {
+    diff[i] += diff[i - 1];
+}
+```
+
+Now:
+
+```cpp
+diff[i] == final value at index i
+```
+
+---
+
+## Complexity
+
+Naive approach:
+
+```text
+O(Q × N)
+```
+
+Difference array:
+
+```text
+Each update: O(1)
+Build final array: O(N)
+
+Total: O(N + Q)
+```
+
+---
+
+## Difference Array vs Prefix Sum
+
+### Prefix Sum
+
+Used for:
+
+```text
+Fast range queries, slow updates.
+```
+
+Example:
+
+```cpp
+sum(l, r)
+```
+
+Time:
+
+```text
+Query: O(1)
+Update: O(N)
+```
+
+---
+
+### Difference Array
+
+Used for:
+
+```text
+Fast range updates, final reconstruction later.
+```
+
+Example:
+
+```cpp
+arr[l...r] += val
+```
+
+Time:
+
+```text
+Update: O(1)
+Final build: O(N)
+```
+
+---
+
+## Recognition Pattern
+
+Think of difference arrays when you see:
+
+- Multiple range increment/decrement operations
+- "Apply all operations and return final array"
+- "How many intervals cover each position?"
+- Large constraints (`10^5` or `10^6`)
+- Offline updates (all queries known beforehand)
+
+---
+
+## Common Problems
+
+- Range Addition
+- Corporate Flight Bookings
+- Car Pooling
+- Brightness / Coverage queries
+- Counting active intervals
+- Railway platform overlap
+- Meeting room overlap
+- Population change over years
+- Line sweep problems
+
+---
+
+## 2D Difference Array
+
+For matrix range updates:
+
+```text
+Add val to rectangle:
+(r1, c1) → (r2, c2)
+```
+
+Update only four cells:
+
+```cpp
+diff[r1][c1] += val;
+diff[r1][c2 + 1] -= val;
+diff[r2 + 1][c1] -= val;
+diff[r2 + 1][c2 + 1] += val;
+```
+
+Then compute a 2D prefix sum.
+
+Complexity:
+
+```text
+O(Q + rows × cols)
+```
+
+instead of:
+
+```text
+O(Q × rows × cols)
+```
+
+---
+
+## Key Formula
+
+For update:
+
+```cpp
+[l, r] += val
+```
+
+Do:
+
+```cpp
+diff[l] += val;
+
+if (r + 1 < n)
+    diff[r + 1] -= val;
+```
+
+Then:
+
+```cpp
+final = prefix_sum(diff);
+```
+
+---
+
+## One-Line Intuition
+
+Difference Array = Mark boundaries.
+
+Prefix Sum = Spread the effect.
+
+Remember:
+
+```text
+Prefix Sum  → Query Optimization
+Difference Array → Update Optimization
+```
