@@ -23,8 +23,8 @@ void UpdateQuery(vector<int> &Tree,vector<int> &Lazy,int start,int end,int i,int
     if(Lazy[i] != 0){
         Tree[i] += (r-l+1) * Lazy[i];
         if(l != r){
-            Tree[2*i + 1] += Lazy[i];
-            Tree[2*i + 2] += Lazy[i];
+            Lazy[2*i + 1] += Lazy[i];
+            Lazy[2*i + 2] += Lazy[i];
         }
         Lazy[i] = 0;
     }
